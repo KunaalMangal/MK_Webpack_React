@@ -1,0 +1,186 @@
+// Card component enhancements
+.card-hoverable {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+
+  &:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+  }
+}
+
+.card-clickable {
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+  }
+}
+
+// Button component enhancements
+.btn {
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+
+  .spinner-border {
+    vertical-align: middle;
+  }
+}
+
+// Form component enhancements
+.form-control {
+  &:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+  }
+
+  &.is-invalid {
+    border-color: #dc3545;
+
+    &:focus {
+      border-color: #dc3545;
+      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+  }
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.form-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #dc3545;
+}
+
+// Badge component enhancements
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+// Accessibility improvements
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000;
+  }
+
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  .form-control {
+    border: 2px solid #000;
+  }
+
+  .badge {
+    border: 1px solid #000;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .card-hoverable:hover {
+    transform: none;
+  }
+
+  .btn:active {
+    transform: none;
+  }
+
+  .spinner-border {
+    animation: none;
+  }
+}
+
+// Author Info component styles
+.author-info-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #3498db !important;
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .fa-user-circle {
+    color: #3498db;
+  }
+
+  .btn-outline-primary {
+    border-color: #3498db;
+    color: #3498db;
+
+    &:hover {
+      background-color: #3498db;
+      border-color: #3498db;
+      color: white;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+    }
+  }
+
+  .badge {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+// Print styles
+@media print {
+  .btn,
+  .badge {
+    border: 1px solid #000 !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  .form-control {
+    border: 1px solid #000 !important;
+    background: white !important;
+  }
+
+  .author-info-card {
+    border: 1px solid #000 !important;
+    background: white !important;
+  }
+}
