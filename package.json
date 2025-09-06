@@ -22,11 +22,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KunaalMangal/mk-webpack-react.git"
+    "url": "https://github.com/KunaalMangal/MK_Webpack_React.git"
   },
-  "homepage": "https://github.com/KunaalMangal/mk-webpack-react#readme",
+  "homepage": "https://kunaalmangal.github.io/MK_Webpack_React",
   "bugs": {
-    "url": "https://github.com/KunaalMangal/mk-webpack-react/issues"
+    "url": "https://github.com/KunaalMangal/MK_Webpack_React/issues"
   },
   "keywords": [
     "react",
@@ -81,6 +81,7 @@
     "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "html-webpack-plugin": "^5.6.3",
     "lodash": "^4.17.21",
