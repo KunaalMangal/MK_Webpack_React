@@ -1,12 +1,12 @@
 {
   "name": "mk-webpack-react",
   "version": "1.0.0",
-  "description": "MK_Webpack_React - A modern React application built with Webpack 5, TypeScript, and SCSS. Features modular components, W3C standards compliance, and comprehensive accessibility features.",
+  "description": "MK Webpack React - A modern React application built with Webpack 5, TypeScript, and SCSS. Features modular components, W3C standards compliance, and comprehensive accessibility features.",
   "main": "src/index.tsx",
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack",
-    "build:prod": "webpack --mode production",
+    "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
@@ -70,6 +70,7 @@
     "@typescript-eslint/parser": "^8.36.0",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "cssnano": "^7.0.7",

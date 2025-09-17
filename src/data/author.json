@@ -104,8 +104,8 @@
     }
   },
   "project": {
-    "name": "MK_Webpack_React",
-    "description": "MK_Webpack_React - A modern React application built with Webpack 5, TypeScript, and SCSS. Features modular components, W3C standards compliance, and comprehensive accessibility features.",
+    "name": "MK Webpack React",
+    "description": "MK Webpack React - A modern React application built with Webpack 5, TypeScript, and SCSS. Features modular components, W3C standards compliance, and comprehensive accessibility features.",
     "repository": "https://github.com/KunaalMangal/mk-webpack-react",
     "license": "MIT",
     "licenseUrl": "https://github.com/KunaalMangal/mk-webpack-react/blob/main/LICENSE",

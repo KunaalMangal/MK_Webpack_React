@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -12,7 +14,7 @@ const common = {
         filename: isProduction ? '[name].[contenthash].js' : 'index.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/',
+        publicPath: isProduction ? './' : '/',
     },
     module: {
         rules: [
@@ -64,6 +66,7 @@ const common = {
                 'og:author': 'KUNAAL MANGAL',
                 'twitter:creator': '@KunaalMangal'
             },
+            inject: true,
             minify: isProduction ? {
                 removeComments: true,
                 collapseWhitespace: true,
@@ -255,31 +258,52 @@ const productionConfig = {
                 },
             }),
         ],
-        splitChunks: {
-            chunks: 'all',
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all',
-                    priority: 10,
-                },
-                common: {
-                    name: 'common',
-                    minChunks: 2,
-                    chunks: 'all',
-                    priority: 5,
-                    reuseExistingChunk: true,
-                },
-            },
-        },
-        runtimeChunk: 'single',
+        splitChunks: false,
     },
     plugins: [
         ...common.plugins,
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
-            chunkFilename: '[id].[contenthash].css',
+            filename: 'styles.[contenthash].css',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'public/site.webmanifest',
+                    to: 'site.webmanifest',
+                },
+                {
+                    from: 'public/android-chrome-192x192.png',
+                    to: 'android-chrome-192x192.png',
+                },
+                {
+                    from: 'public/android-chrome-512x512.png',
+                    to: 'android-chrome-512x512.png',
+                },
+                {
+                    from: 'public/apple-touch-icon.png',
+                    to: 'apple-touch-icon.png',
+                },
+                {
+                    from: 'public/favicon-16x16.png',
+                    to: 'favicon-16x16.png',
+                },
+                {
+                    from: 'public/favicon-32x32.png',
+                    to: 'favicon-32x32.png',
+                },
+                {
+                    from: 'public/favicon.ico',
+                    to: 'favicon.ico',
+                },
+                {
+                    from: 'public/screenshot-wide.png',
+                    to: 'screenshot-wide.png',
+                },
+                {
+                    from: 'public/screenshot-narrow.png',
+                    to: 'screenshot-narrow.png',
+                },
+            ],
         }),
     ],
 };
