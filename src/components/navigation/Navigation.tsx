@@ -71,13 +71,13 @@ const Navigation: React.FC = () => {
         <Link
           className='navbar-brand fw-bold'
           to='/'
-          aria-label='MK_Webpack_React - Home'
+          aria-label='MK Webpack React - Home'
           tabIndex={0}
         >
           <span role='img' aria-label='react logo' className='me-2'>
             ⚛️
           </span>
-          MK_Webpack_React
+          MK Webpack React
         </Link>
 
         <button
