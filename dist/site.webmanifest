@@ -1,23 +1,23 @@
 {
-  "name": "MK_Webpack_React",
-  "short_name": "MK_Webpack_React",
-  "description": "MK_Webpack_React - A modern React application built with Webpack 5, TypeScript, and SCSS",
-  "start_url": "/",
+  "name": "MK Webpack React",
+  "short_name": "MK Webpack React",
+  "description": "MK Webpack React - A modern React application built with Webpack 5, TypeScript, and SCSS",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f8f9fa",
   "theme_color": "#3498db",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "./",
   "lang": "en",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "./android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "./android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -26,16 +26,16 @@
   "categories": ["productivity", "utilities"],
   "screenshots": [
     {
-      "src": "/screenshot-wide.png",
+      "src": "./screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "/screenshot-narrow.png",
+      "src": "./screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow"
     }
   ]
-} 
+}
