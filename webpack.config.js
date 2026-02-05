@@ -14,7 +14,7 @@ const common = {
         filename: isProduction ? '[name].[contenthash].js' : 'index.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: isProduction ? './' : '/',
+        publicPath: isProduction ? '/mk-webpack-react/' : '/',
     },
     module: {
         rules: [
